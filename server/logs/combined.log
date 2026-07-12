@@ -452,3 +452,148 @@ Error: Failed to generate content from AI model
 [90m22:51:02.034[0m  [36mℹ INFO   [39m  Server started on port 3000
 [90m22:51:03.725[0m  [36mℹ INFO   [39m  Gemini AI client initialized
 [90m22:51:03.746[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m10:46:09.759[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m10:46:10.262[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m10:46:18.303[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m10:46:18.326[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m10:46:20.771[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m10:46:20.787[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:21:54.677[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:21:54.738[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:21:56.234[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:21:56.247[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:22:03.511[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:22:03.524[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:22:07.031[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:22:07.051[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:22:09.705[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:22:09.726[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:22:16.566[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:22:16.584[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:24:24.240[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:24:24.305[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:29:52.091[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:29:52.121[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:30:02.105[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:30:02.123[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:39:07.765[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:39:08.242[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:39:11.562[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:39:11.578[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:39:36.094[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:39:36.108[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:39:38.228[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:39:38.242[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:39:42.841[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:39:42.857[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:40:18.246[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:40:18.264[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:40:46.048[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:40:46.067[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:40:53.467[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:40:53.483[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:41:19.252[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:41:19.269[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:42:28.538[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:42:28.560[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:44:49.127[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:44:49.144[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:47:44.979[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:47:45.001[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:48:03.515[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:48:03.529[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:50:44.783[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:51:07.627[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:54:35.625[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:54:36.111[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:13.152[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:55:13.193[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:28.366[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:55:28.404[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:29.989[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:55:30.023[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:39.818[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:55:39.856[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:58.635[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:55:58.700[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:55:58.705[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:56:02.349[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:56:02.390[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:56:02.395[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:56:24.884[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:56:24.956[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:56:24.968[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:57:57.195[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:57:57.247[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:57:57.252[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:30.691[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:58:30.749[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:58:30.756[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:48.587[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:58:48.645[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:58:48.651[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:57.718[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:58:57.761[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:58:57.770[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:59:39.714[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:59:39.807[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:59:39.813[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:59:40.765[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m11:59:40.803[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m11:59:40.807[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:00:32.069[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:00:32.160[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:00:32.167[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:00:47.097[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:00:47.154[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:00:47.159[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:04:56.825[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:04:56.880[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:05:01.931[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:05:01.980[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:05:01.985[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:05:52.629[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:05:52.689[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:05:52.694[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:05:57.228[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:05:57.268[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:05:57.272[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:06:12.863[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:06:12.940[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:06:12.948[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:11:19.503[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:11:19.579[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:11:19.587[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:13:58.148[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:13:58.208[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:13:58.218[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:16.875[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:14:16.956[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:14:16.970[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:18.735[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:14:18.806[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:14:18.813[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:24.306[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:14:24.361[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:14:24.369[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:18:48.119[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:18:48.199[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:18:48.208[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:19:15.107[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:19:15.170[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:19:15.177[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:20:41.212[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:20:41.271[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:20:41.279[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:21:50.928[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:21:50.995[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:21:51.011[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:25:21.042[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:25:21.183[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:25:21.201[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:25:31.153[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:25:31.230[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:25:31.236[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:28:37.634[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m12:28:37.821[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m12:28:37.858[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net

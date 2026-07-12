@@ -165,3 +165,31 @@ Error: Failed to generate content from AI model
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
     at async generateText (D:\Github\Backend\BackendAdvanceWithNode\controllers\ai.controller.js:22:20)
 [90m────────────────────────────────────────────────────────────[0m
+[90m11:55:58.705[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:56:02.395[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:56:24.968[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:57:57.252[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:30.756[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:48.651[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:58:57.770[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:59:39.813[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m11:59:40.807[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:00:32.167[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:00:47.159[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:04:56.883[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:05:01.985[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:05:52.694[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:05:57.272[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:06:12.948[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:11:19.587[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.clustermain.vcjzulc.mongodb.net
+[90m12:13:58.218[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:16.970[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:18.813[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:14:24.369[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:18:48.208[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:19:15.177[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.cevv2nk.mongodb.net
+[90m12:20:41.279[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:21:51.011[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:25:21.201[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:25:31.236[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m12:28:37.858[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
