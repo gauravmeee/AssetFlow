@@ -50,15 +50,18 @@ const navItems = [
     label: 'Main',
     items: [
       { to: '/dashboard', icon: '⊞', text: 'Dashboard' },
-      { to: '/login', icon: '◈', text: 'Login' },
+      { to: '/assets', icon: '◫', text: 'Assets' },
+      { to: '/allocations', icon: '⇄', text: 'Allocations' },
+      { to: '/bookings', icon: '🗓', text: 'Bookings' },
     ],
   },
   {
-    label: 'Manage',
+    label: 'Operations',
     items: [
-      { to: '/about', icon: '◎', text: 'About' },
-      { to: '/accounts', icon: '◷', text: 'Accounts' },
-      { to: '/testing', icon: '▦', text: 'Testing' },
+      { to: '/maintenance', icon: '🛠', text: 'Maintenance' },
+      { to: '/audit', icon: '✓', text: 'Audit' },
+      { to: '/notifications', icon: '🔔', text: 'Notifications' },
+      { to: '/reports', icon: '◔', text: 'Reports' },
     ],
   },
   {

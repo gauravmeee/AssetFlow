@@ -4,7 +4,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AuthLayout from '@/layouts/AuthLayout'
 import MainLayout from '@/layouts/MainLayout'
 import { Login } from '@/pages/Auth/Login'
+import AssetsPage from '@/pages/Assets/AssetsPage'
+import AllocationsPage from '@/pages/Allocations/AllocationsPage'
+import AuditPage from '@/pages/Audit/AuditPage'
+import BookingsPage from '@/pages/Bookings/BookingsPage'
 import Dashboard from '@/pages/Dashboard/Dashboard'
+import MaintenancePage from '@/pages/Maintenance/MaintenancePage'
+import NotificationsPage from '@/pages/Notifications/NotificationsPage'
+import ReportsPage from '@/pages/Reports/ReportsPage'
 
 import ErrorPage from '../../devStack/pages/ErrorPage'
 import NotFoundPage from '../../devStack/pages/NotFoundPage'
@@ -38,6 +45,13 @@ const router = createBrowserRouter([
         children: [
           { path: ROUTES.DASHBOARD, element: <Dashboard /> },
           { path: ROUTES.HOME, element: <Dashboard /> },
+          { path: ROUTES.ASSETS, element: <AssetsPage /> },
+          { path: ROUTES.ALLOCATIONS, element: <AllocationsPage /> },
+          { path: ROUTES.BOOKINGS, element: <BookingsPage /> },
+          { path: ROUTES.MAINTENANCE, element: <MaintenancePage /> },
+          { path: ROUTES.AUDIT, element: <AuditPage /> },
+          { path: ROUTES.REPORTS, element: <ReportsPage /> },
+          { path: ROUTES.NOTIFICATIONS, element: <NotificationsPage /> },
         ],
       },
 
