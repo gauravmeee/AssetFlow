@@ -1,22 +1,21 @@
 import { Navigate, Outlet } from 'react-router-dom'
 
+import { useAuth } from '@/hooks/useAuth'
+
 import { ROUTES } from './routes'
 
-const MOCK_USERS = {
-  admin: { isAuthenticated: true, user: { name: 'Admin User', role: 'ADMIN' } },
-  user: { isAuthenticated: true, user: { name: 'Normal User', role: 'USER' } },
-  tester: { isAuthenticated: true, user: { name: 'Tester User', role: 'TESTER' } },
-  guest: { isAuthenticated: false, user: null },
-}
-
-const auth = MOCK_USERS.admin
-
 export function ProtectedRoute({ allowedRoles }) {
-  if (!auth.isAuthenticated) {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    return <div style={{ padding: 24 }}>Loading...</div>
+  }
+
+  if (!user) {
     return <Navigate to={ROUTES.LOGIN} replace />
   }
 
-  if (allowedRoles && !allowedRoles.includes(auth.user?.role)) {
+  if (allowedRoles && !allowedRoles.includes(user?.role)) {
     return <Navigate to={ROUTES.DASHBOARD} replace />
   }
 

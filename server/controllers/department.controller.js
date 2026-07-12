@@ -1,7 +1,7 @@
 const Department = require("../models/department.model");
 const logger = require("../utils/logger");
-const ApiResponse = require("../utils/ApiResponse");
-const ApiError = require("../utils/ApiError");
+const ApiResponse = require("../utils/apiResponse");
+const ApiError = require("../utils/apiError");
 
 const createDepartment = async (req, res, next) => {
   try {

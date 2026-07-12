@@ -1,7 +1,7 @@
 const Category = require("../models/category.model");
 const logger = require("../utils/logger");
-const ApiResponse = require("../utils/ApiResponse");
-const ApiError = require("../utils/ApiError");
+const ApiResponse = require("../utils/apiResponse");
+const ApiError = require("../utils/apiError");
 
 const createCategory = async (req, res, next) => {
   try {

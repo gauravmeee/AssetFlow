@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import AuthLayout from '@/layouts/AuthLayout'
 import MainLayout from '@/layouts/MainLayout'
+import { ForgotPassword } from '@/pages/Auth/ForgotPassword'
 import { Login } from '@/pages/Auth/Login'
+import { Register } from '@/pages/Auth/Register'
 import AssetsPage from '@/pages/Assets/AssetsPage'
 import AllocationsPage from '@/pages/Allocations/AllocationsPage'
 import AuditPage from '@/pages/Audit/AuditPage'
@@ -29,7 +31,11 @@ const Placeholder = ({ name }) => (
 const router = createBrowserRouter([
   {
     element: <AuthLayout />,
-    children: [{ path: ROUTES.LOGIN, element: <Login /> }],
+    children: [
+      { path: ROUTES.LOGIN, element: <Login /> },
+      { path: ROUTES.REGISTER, element: <Register /> },
+      { path: ROUTES.FORGOT_PASSWORD, element: <ForgotPassword /> },
+    ],
   },
 
   {

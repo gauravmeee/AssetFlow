@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 const logger = require("../utils/logger");
-const ApiResponse = require("../utils/ApiResponse");
-const ApiError = require("../utils/ApiError");
+const ApiResponse = require("../utils/apiResponse");
+const ApiError = require("../utils/apiError");
 
 const getHome = (req, res) => {
   logger.info("Home route accessed");

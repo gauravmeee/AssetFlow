@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import { useAuth } from '@/hooks/useAuth'
+
 const styles = {
   wrapper: {
     minHeight: '100vh',
@@ -94,20 +96,28 @@ const styles = {
 
 export function Login() {
   const navigate = useNavigate()
+  const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) {
       setError('Please fill in both fields.')
       return
     }
-    // replace with your real auth logic
-    if (email === 'admin@myapp.com' && password === 'password') {
+
+    setLoading(true)
+    setError('')
+
+    try {
+      await login({ email, password })
       navigate('/dashboard')
-    } else {
-      setError('Invalid email or password.')
+    } catch (err) {
+      setError(err?.response?.data?.message || 'Invalid email or password.')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -148,9 +158,18 @@ export function Login() {
           }}
         />
 
-        <button style={styles.submitBtn} onClick={handleLogin}>
-          Sign in
+        <button style={styles.submitBtn} onClick={handleLogin} disabled={loading}>
+          {loading ? 'Signing in...' : 'Sign in'}
         </button>
+
+        <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'space-between', fontSize: '13px' }}>
+          <span style={{ color: '#534AB7', cursor: 'pointer' }} onClick={() => navigate('/register')}>
+            Create account
+          </span>
+          <span style={{ color: '#534AB7', cursor: 'pointer' }} onClick={() => navigate('/forgot-password')}>
+            Forgot password?
+          </span>
+        </div>
       </div>
     </div>
   )

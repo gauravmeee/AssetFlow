@@ -1,6 +1,6 @@
 const Asset = require("../models/asset.model");
-const ApiError = require("../utils/ApiError");
-const ApiResponse = require("../utils/ApiResponse");
+const ApiError = require("../utils/apiError");
+const ApiResponse = require("../utils/apiResponse");
 const logger = require("../utils/logger");
 
 const createAsset = async (req, res, next) => {
@@ -44,15 +44,15 @@ const createAsset = async (req, res, next) => {
       .sort({ createdAt: -1 })
       .select("assetTag");
 
-    let next = 1;
+    let nextAssetNumber = 1;
 
     if (lastAsset?.assetTag) {
       const match = lastAsset.assetTag.match(/\d+/);
 
-      if (match) next = Number(match[0]) + 1;
+      if (match) nextAssetNumber = Number(match[0]) + 1;
     }
 
-    const assetTag = `AF-${String(next).padStart(4, "0")}`;
+    const assetTag = `AF-${String(nextAssetNumber).padStart(4, "0")}`;
 
     const asset = await Asset.create({
       assetTag,

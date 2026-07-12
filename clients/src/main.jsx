@@ -2,6 +2,7 @@ import ThemeProvider from '@devStack/constants/Theme-Provider'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import { AuthProvider } from './context/AuthContext'
 import { AppRouter } from './router'
 
 import './index.css'
@@ -10,7 +11,9 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <AppRouter />
+      <AuthProvider>
+        <AppRouter />
+      </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>
 )
