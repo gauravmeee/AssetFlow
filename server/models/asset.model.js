@@ -21,12 +21,21 @@ const assetSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
       required: true,
+      index: true,
     },
 
     department: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Department",
       required: true,
+      index: true,
+    },
+
+    location: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 150,
     },
 
     serialNumber: {
@@ -47,10 +56,14 @@ const assetSchema = new mongoose.Schema(
       min: 0,
     },
 
+    // Keep this only if you want quick lookup.
+    // Actual allocation history should be maintained
+    // in Allocation collection.
     currentHolder: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       default: null,
+      index: true,
     },
 
     condition: {
@@ -74,9 +87,15 @@ const assetSchema = new mongoose.Schema(
       index: true,
     },
 
-    photos: [
+    isShared: {
+      type: Boolean,
+      default: false,
+    },
+
+    attachments: [
       {
         type: String,
+        trim: true,
       },
     ],
 
@@ -84,6 +103,7 @@ const assetSchema = new mongoose.Schema(
       type: String,
       trim: true,
       default: "",
+      maxlength: 500,
     },
 
     createdBy: {
@@ -102,6 +122,7 @@ const assetSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
       select: false,
+      index: true,
     },
 
     deletedAt: {
@@ -116,11 +137,22 @@ const assetSchema = new mongoose.Schema(
   },
 );
 
-assetSchema.index({ assetTag: 1 }, { unique: true });
-assetSchema.index({ serialNumber: 1 }, { unique: true, sparse: true });
-assetSchema.index({ category: 1 });
-assetSchema.index({ department: 1 });
-assetSchema.index({ currentHolder: 1 });
-assetSchema.index({ status: 1 });
+// Text Search
+assetSchema.index({
+  name: "text",
+  assetTag: "text",
+  serialNumber: "text",
+});
+
+// Common Query Indexes
+assetSchema.index({ category: 1, status: 1 });
+assetSchema.index({ department: 1, status: 1 });
+assetSchema.index({ currentHolder: 1, status: 1 });
+
+// Ignore soft deleted assets
+assetSchema.pre(/^find/, function (next) {
+  this.where({ isDeleted: false });
+  next();
+});
 
 module.exports = mongoose.model("Asset", assetSchema);
