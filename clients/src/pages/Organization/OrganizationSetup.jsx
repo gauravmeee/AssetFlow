@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 import axiosInstance from '@/api/axiosInstance'
 import { useAuth } from '@/hooks/useAuth'
+import { isAdminRole } from '@/utils/role-utils'
 
 const S = {
   page: { display: 'flex', flexDirection: 'column', gap: '18px' },
@@ -44,7 +45,7 @@ export default function OrganizationSetup() {
   const [error, setError] = useState('')
   const [departmentForm, setDepartmentForm] = useState({ name: '', description: '', manager: '' })
   const [categoryForm, setCategoryForm] = useState({ name: '', description: '' })
-  const isAdmin = user?.role === 'ADMIN'
+  const isAdmin = isAdminRole(user?.role)
 
   const departmentHeadOptions = useMemo(
     () => users.filter((item) => ['DEPARTMENT_HEAD', 'ADMIN'].includes(item.role)),
