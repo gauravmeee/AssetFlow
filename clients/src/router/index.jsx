@@ -13,6 +13,7 @@ import BookingsPage from '@/pages/Bookings/BookingsPage'
 import Dashboard from '@/pages/Dashboard/Dashboard'
 import MaintenancePage from '@/pages/Maintenance/MaintenancePage'
 import NotificationsPage from '@/pages/Notifications/NotificationsPage'
+import OrganizationSetup from '@/pages/Organization/OrganizationSetup'
 import ReportsPage from '@/pages/Reports/ReportsPage'
 
 import ErrorPage from '../../devStack/pages/ErrorPage'
@@ -58,19 +59,16 @@ const router = createBrowserRouter([
           { path: ROUTES.AUDIT, element: <AuditPage /> },
           { path: ROUTES.REPORTS, element: <ReportsPage /> },
           { path: ROUTES.NOTIFICATIONS, element: <NotificationsPage /> },
+          { path: ROUTES.SETTINGS, element: <OrganizationSetup /> },
         ],
       },
 
       // admin only
       {
         element: <ProtectedRoute allowedRoles={[ROLES.ADMIN]} />,
-        children: [{ path: ROUTES.ACCOUNTS, element: <Placeholder name="Accounts" /> }],
-      },
-
-      // tester only
-      {
-        element: <ProtectedRoute allowedRoles={[ROLES.TESTER]} />,
-        children: [{ path: ROUTES.TESTING, element: <Placeholder name="Testing" /> }],
+        children: [
+          { path: ROUTES.ACCOUNTS, element: <OrganizationSetup /> },
+        ],
       },
     ],
   },

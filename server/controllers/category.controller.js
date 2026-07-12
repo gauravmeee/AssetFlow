@@ -6,8 +6,9 @@ const ApiError = require("../utils/apiError");
 const createCategory = async (req, res, next) => {
   try {
     const { name, description, status, createdBy, updatedBy } = req.body;
+    const actorId = req.user?._id || createdBy;
 
-    if (!name || !createdBy) {
+    if (!name || !actorId) {
       throw ApiError.badRequest("Name and Created By are required");
     }
 
@@ -41,8 +42,8 @@ const createCategory = async (req, res, next) => {
       code,
       description: description?.trim() || "",
       status: status || "ACTIVE",
-      createdBy,
-      updatedBy: updatedBy || createdBy,
+      createdBy: actorId,
+      updatedBy: updatedBy || actorId,
     });
 
     logger.info(`Category created successfully: ${category._id}`);
@@ -94,6 +95,7 @@ const getCategoryById = async (req, res, next) => {
 const updateCategory = async (req, res, next) => {
   try {
     const { name, description, status, updatedBy } = req.body;
+    const actorId = req.user?._id || updatedBy;
 
     const category = await Category.findOne({
       _id: req.params.id,
@@ -118,7 +120,7 @@ const updateCategory = async (req, res, next) => {
     if (name) category.name = name.trim();
     if (description !== undefined) category.description = description.trim();
     if (status) category.status = status;
-    category.updatedBy = updatedBy || category.updatedBy;
+    category.updatedBy = actorId || category.updatedBy;
 
     await category.save();
 

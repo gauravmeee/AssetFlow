@@ -10,6 +10,9 @@ const departmentRoutes = require("./routes/department.routes");
 const categoryRoutes = require("./routes/category.routes");
 const authRoutes = require("./routes/auth.routes");
 const assetRoutes = require("./routes/assest.routes");
+const allocationRoutes = require("./routes/allocation.routes");
+const bookingRoutes = require("./routes/booking.routes");
+const dashboardRoutes = require("./routes/dashboard.routes");
 const logger = require("./utils/logger");
 const requestLogger = require("./middleware/requestLogger");
 const errorHandler = require("./middleware/errorHandler");
@@ -17,13 +20,42 @@ const errorHandler = require("./middleware/errorHandler");
 connectDB();
 app.use(express.json());
 app.use((req, res, next) => {
-  const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173")
+  const configuredOrigins = (
+    process.env.CLIENT_ORIGIN || "http://localhost:5173,http://127.0.0.1:5173"
+  )
     .split(",")
-    .map((origin) => origin.trim());
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
+  const fallbackOrigins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://0.0.0.0:5173",
+  ];
+  const allowedOrigins = [
+    ...new Set([...configuredOrigins, ...fallbackOrigins]),
+  ];
   const origin = req.headers.origin;
 
-  if (origin && allowedOrigins.includes(origin)) {
+  const isAllowedOrigin = (candidate) => {
+    if (!candidate) return false;
+
+    if (allowedOrigins.includes(candidate)) return true;
+
+    try {
+      const { hostname, protocol, port } = new URL(candidate);
+      return (
+        ["localhost", "127.0.0.1", "0.0.0.0", "::1"].includes(hostname) &&
+        ["http:", "https:"].includes(protocol)
+      );
+    } catch {
+      return false;
+    }
+  };
+
+  if (origin && isAllowedOrigin(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Credentials", "true");
   }
 
   res.setHeader("Vary", "Origin");
@@ -49,6 +81,9 @@ app.use("/", aiRoutes);
 app.use("/", departmentRoutes);
 app.use("/", categoryRoutes);
 app.use("/", assetRoutes);
+app.use("/", allocationRoutes);
+app.use("/", bookingRoutes);
+app.use("/", dashboardRoutes);
 app.use("/auth", authRoutes);
 
 app.use(errorHandler);

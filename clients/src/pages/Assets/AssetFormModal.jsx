@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import axiosInstance from '@/api/axiosInstance'
 
@@ -70,10 +70,32 @@ export default function AssetFormModal({ open, onClose, onCreated }) {
     acquisitionDate: '',
     acquisitionCost: '',
     condition: 'NEW',
+    isShared: false,
     remarks: '',
   })
+  const [categories, setCategories] = useState([])
+  const [departments, setDepartments] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (!open) return
+
+    const loadOptions = async () => {
+      try {
+        const [categoryRes, departmentRes] = await Promise.all([
+          axiosInstance.get('/categories'),
+          axiosInstance.get('/departments'),
+        ])
+        setCategories(categoryRes.data?.data || [])
+        setDepartments(departmentRes.data?.data || [])
+      } catch {
+        setError('Create departments and categories before registering assets.')
+      }
+    }
+
+    loadOptions()
+  }, [open])
 
   if (!open) return null
 
@@ -118,14 +140,24 @@ export default function AssetFormModal({ open, onClose, onCreated }) {
           </div>
           <div>
             <label style={styles.label}>Category</label>
-            <input style={styles.input} value={form.category} onChange={(e) => handleChange('category', e.target.value)} />
+            <select style={styles.input} value={form.category} onChange={(e) => handleChange('category', e.target.value)}>
+              <option value="">Select category</option>
+              {categories.map((category) => (
+                <option key={category._id} value={category._id}>{category.name}</option>
+              ))}
+            </select>
           </div>
         </div>
 
         <div style={styles.row}>
           <div>
             <label style={styles.label}>Department</label>
-            <input style={styles.input} value={form.department} onChange={(e) => handleChange('department', e.target.value)} />
+            <select style={styles.input} value={form.department} onChange={(e) => handleChange('department', e.target.value)}>
+              <option value="">Select department</option>
+              {departments.map((department) => (
+                <option key={department._id} value={department._id}>{department.name}</option>
+              ))}
+            </select>
           </div>
           <div>
             <label style={styles.label}>Location</label>
@@ -161,6 +193,10 @@ export default function AssetFormModal({ open, onClose, onCreated }) {
         </div>
 
         <div>
+          <label style={{ ...styles.label, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <input type="checkbox" checked={form.isShared} onChange={(e) => handleChange('isShared', e.target.checked)} />
+            Shared or bookable asset
+          </label>
           <label style={styles.label}>Remarks</label>
           <textarea style={styles.textarea} value={form.remarks} onChange={(e) => handleChange('remarks', e.target.value)} />
         </div>

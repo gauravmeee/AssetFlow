@@ -11,6 +11,7 @@ export const ROUTES = {
   AUDIT: '/audit',
   REPORTS: '/reports',
   NOTIFICATIONS: '/notifications',
+  SETTINGS: '/settings',
   ABOUT: '/about',
   ACCOUNTS: '/accounts',
   TESTING: '/testing',
@@ -19,6 +20,7 @@ export const ROUTES = {
 
 export const ROLES = {
   ADMIN: 'ADMIN',
-  USER: 'USER',
-  TESTER: 'TESTER',
+  ASSET_MANAGER: 'ASSET_MANAGER',
+  DEPARTMENT_HEAD: 'DEPARTMENT_HEAD',
+  EMPLOYEE: 'EMPLOYEE',
 }

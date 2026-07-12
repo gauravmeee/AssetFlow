@@ -150,9 +150,8 @@ assetSchema.index({ department: 1, status: 1 });
 assetSchema.index({ currentHolder: 1, status: 1 });
 
 // Ignore soft deleted assets
-assetSchema.pre(/^find/, function (next) {
+assetSchema.pre(/^find/, function () {
   this.where({ isDeleted: false });
-  next();
 });
 
 module.exports = mongoose.model("Asset", assetSchema);

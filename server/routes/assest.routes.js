@@ -9,15 +9,16 @@ const {
   updateAsset,
   deleteAsset,
 } = require("../controllers/asset.controller");
+const { authenticate } = require("../middleware/auth");
 
-router.post("/assets", createAsset);
+router.post("/assets", authenticate, createAsset);
 
 router.get("/assets", getAssets);
 
 router.get("/assets/:id", getAssetById);
 
-router.put("/assets/:id", updateAsset);
+router.put("/assets/:id", authenticate, updateAsset);
 
-router.delete("/assets/:id", deleteAsset);
+router.delete("/assets/:id", authenticate, deleteAsset);
 
 module.exports = router;

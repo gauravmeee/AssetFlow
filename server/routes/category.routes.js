@@ -8,11 +8,17 @@ const {
   updateCategory,
   deleteCategory,
 } = require("../controllers/category.controller");
+const { authenticate, authorize } = require("../middleware/auth");
 
-router.post("/categories", createCategory);
-router.get("/categories", getCategories);
-router.get("/categories/:id", getCategoryById);
-router.put("/categories/:id", updateCategory);
-router.delete("/categories/:id", deleteCategory);
+router.post("/categories", authenticate, authorize("ADMIN"), createCategory);
+router.get("/categories", authenticate, getCategories);
+router.get("/categories/:id", authenticate, getCategoryById);
+router.put("/categories/:id", authenticate, authorize("ADMIN"), updateCategory);
+router.delete(
+  "/categories/:id",
+  authenticate,
+  authorize("ADMIN"),
+  deleteCategory,
+);
 
 module.exports = router;

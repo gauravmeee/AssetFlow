@@ -11,7 +11,7 @@ const S = {
   navLabel: {
     fontSize: '11px',
     color: 'var(--sidebar-label-color)',
-    fontWeight: '500',
+    fontWeight: '600',
     letterSpacing: '0.06em',
     padding: '8px 8px 4px',
     textTransform: 'uppercase',
@@ -29,18 +29,23 @@ const S = {
     background: 'transparent',
     cursor: 'pointer',
     width: '100%',
-    transition: 'background 0.1s, color 0.1s',
   },
   navLinkActive: {
     backgroundColor: 'var(--sidebar-link-active-bg)',
     color: 'var(--sidebar-link-active-color)',
-    fontWeight: '500',
-  },
-  navLinkHover: {
-    backgroundColor: 'var(--sidebar-link-hover-bg)',
+    fontWeight: '600',
   },
   navIcon: {
-    fontSize: '16px',
+    width: '22px',
+    height: '22px',
+    borderRadius: '6px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#eef2ff',
+    color: '#4338ca',
+    fontSize: '11px',
+    fontWeight: 700,
     flexShrink: 0,
   },
 }
@@ -49,24 +54,24 @@ const navItems = [
   {
     label: 'Main',
     items: [
-      { to: '/dashboard', icon: '⊞', text: 'Dashboard' },
-      { to: '/assets', icon: '◫', text: 'Assets' },
-      { to: '/allocations', icon: '⇄', text: 'Allocations' },
-      { to: '/bookings', icon: '🗓', text: 'Bookings' },
+      { to: '/dashboard', icon: 'D', text: 'Dashboard' },
+      { to: '/assets', icon: 'A', text: 'Assets' },
+      { to: '/allocations', icon: 'T', text: 'Allocations' },
+      { to: '/bookings', icon: 'B', text: 'Bookings' },
     ],
   },
   {
     label: 'Operations',
     items: [
-      { to: '/maintenance', icon: '🛠', text: 'Maintenance' },
-      { to: '/audit', icon: '✓', text: 'Audit' },
-      { to: '/notifications', icon: '🔔', text: 'Notifications' },
-      { to: '/reports', icon: '◔', text: 'Reports' },
+      { to: '/maintenance', icon: 'M', text: 'Maintenance' },
+      { to: '/audit', icon: 'V', text: 'Audit' },
+      { to: '/notifications', icon: 'N', text: 'Notifications' },
+      { to: '/reports', icon: 'R', text: 'Reports' },
     ],
   },
   {
     label: 'System',
-    items: [{ to: '/settings', icon: '⚙', text: 'Settings' }],
+    items: [{ to: '/settings', icon: 'O', text: 'Organization setup' }],
   },
 ]
 

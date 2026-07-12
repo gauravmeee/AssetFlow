@@ -322,3 +322,28 @@ TypeError: next is not a function
     at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
     at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
 [90m────────────────────────────────────────────────────────────[0m
+[90m16:36:19.845[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:36:19.849[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:36:37.722[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:36:37.727[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:36:56.453[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:36:56.457[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:47:39.793[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:47:39.798[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:48:18.916[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:48:18.923[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:48:20.051[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:48:20.054[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:54:59.426[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:54:59.429[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:00.901[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:00.909[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:02.261[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:02.265[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:16.930[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:16.935[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:18.255[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:20.320[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:20.335[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:21.973[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
+[90m16:55:21.976[0m  [31m✖ ERROR  [39m  GET /assets - 500 - next is not a function
