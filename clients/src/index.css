@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   THEME TOKENS
+   Three-tier architecture:
+     1. Primitives   — raw palette values (never use in components directly)
+     2. Semantic     — meaning-based aliases (use these in components)
+     3. Component    — scoped to specific UI pieces
+
+   Only two schemes: light | dark
+   Driven by [data-scheme] on <html>
+   Default (no preference saved) → system OS preference is resolved before mount
+   ============================================================ */
+
+/* ─── Smooth transitions — enabled after first paint to avoid load flash ── */
+.theme-transitions-enabled,
+.theme-transitions-enabled * {
+  transition:
+    background-color 0.2s ease,
+    color 0.15s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+/* ─── Primitive Palette ─────────────────────────────────────────────────── */
+/* These are the only raw values in the entire system.
+   Never reference these in components — always go through semantic tokens.  */
+:root {
+  /* Brand — Indigo/Purple */
+  --primitive-indigo-50: #f0effd;
+  --primitive-indigo-100: #e0defc;
+  --primitive-indigo-300: #9b95ef;
+  --primitive-indigo-500: #534ab7;
+  --primitive-indigo-600: #4239a0;
+  --primitive-indigo-700: #342d82;
+
+  /* Neutrals */
+  --primitive-white: #ffffff;
+  --primitive-gray-50: #f9f9fb;
+  --primitive-gray-100: #f2f2f5;
+  --primitive-gray-200: #e4e4ea;
+  --primitive-gray-300: #d1d1db;
+  --primitive-gray-400: #a0a0b2;
+  --primitive-gray-500: #70708a;
+  --primitive-gray-600: #555568;
+  --primitive-gray-700: #3a3a4a;
+  --primitive-gray-800: #25252f;
+  --primitive-gray-850: #1c1c24;
+  --primitive-gray-900: #14141b;
+  --primitive-gray-950: #0d0d12;
+
+  /* Status — used by StatusTag and alert components */
+  --primitive-red-500: #ef4444;
+  --primitive-amber-500: #f59e0b;
+  --primitive-emerald-500: #10b981;
+}
+
+/* ============================================================
+   LIGHT SCHEME
+   ============================================================ */
+[data-scheme='light'] {
+  /* ── Semantic — Backgrounds ── */
+  --color-bg-base: var(--primitive-gray-50); /* page background */
+  --color-bg-surface: var(--primitive-white); /* cards, panels */
+  --color-bg-elevated: var(--primitive-white); /* modals, dropdowns */
+  --color-bg-subtle: var(--primitive-gray-100); /* table rows, sections */
+  --color-bg-hover: var(--primitive-gray-100); /* hover states */
+
+  /* ── Semantic — Text ── */
+  --color-text-primary: var(--primitive-gray-900);
+  --color-text-secondary: var(--primitive-gray-600);
+  --color-text-muted: var(--primitive-gray-400);
+  --color-text-inverse: var(--primitive-white);
+
+  /* ── Semantic — Borders ── */
+  --color-border-default: var(--primitive-gray-200);
+  --color-border-strong: var(--primitive-gray-300);
+
+  /* ── Semantic — Accent (brand) ── */
+  --color-accent: var(--primitive-indigo-500);
+  --color-accent-hover: var(--primitive-indigo-600);
+  --color-accent-subtle: var(--primitive-indigo-50);
+  --color-accent-text: var(--primitive-indigo-500);
+
+  /* ── Semantic — Status ── */
+  --color-status-error: var(--primitive-red-500);
+  --color-status-warning: var(--primitive-amber-500);
+  --color-status-success: var(--primitive-emerald-500);
+
+  /* ── Component — Sidebar ── */
+  --sidebar-bg: var(--primitive-white);
+  --sidebar-border: var(--primitive-gray-200);
+  --sidebar-link-color: var(--primitive-gray-600);
+  --sidebar-link-hover-bg: var(--primitive-gray-100);
+  --sidebar-link-active-bg: var(--primitive-indigo-50);
+  --sidebar-link-active-color: var(--primitive-indigo-500);
+  --sidebar-label-color: var(--primitive-gray-400);
+
+  /* ── Component — Topbar ── */
+  --topbar-bg: var(--primitive-white);
+  --topbar-border: var(--primitive-gray-200);
+  --topbar-text: var(--primitive-gray-900);
+
+  /* ── Component — Theme Toggle button ── */
+  --toggle-bg: var(--primitive-gray-100);
+  --toggle-bg-hover: var(--primitive-gray-200);
+  --toggle-icon-color: var(--primitive-gray-600);
+}
+
+/* ============================================================
+   DARK SCHEME
+   ============================================================ */
+[data-scheme='dark'] {
+  /* ── Semantic — Backgrounds ── */
+  --color-bg-base: var(--primitive-gray-950);
+  --color-bg-surface: var(--primitive-gray-900);
+  --color-bg-elevated: var(--primitive-gray-850);
+  --color-bg-subtle: var(--primitive-gray-800);
+  --color-bg-hover: var(--primitive-gray-800);
+
+  /* ── Semantic — Text ── */
+  --color-text-primary: var(--primitive-gray-50);
+  --color-text-secondary: var(--primitive-gray-400);
+  --color-text-muted: var(--primitive-gray-500);
+  --color-text-inverse: var(--primitive-gray-950);
+
+  /* ── Semantic — Borders ── */
+  --color-border-default: var(--primitive-gray-800);
+  --color-border-strong: var(--primitive-gray-700);
+
+  /* ── Semantic — Accent (brand) ── */
+  --color-accent: var(--primitive-indigo-300);
+  --color-accent-hover: var(--primitive-indigo-100);
+  --color-accent-subtle: rgba(83, 74, 183, 0.15);
+  --color-accent-text: var(--primitive-indigo-300);
+
+  /* ── Semantic — Status ── */
+  --color-status-error: var(--primitive-red-500);
+  --color-status-warning: var(--primitive-amber-500);
+  --color-status-success: var(--primitive-emerald-500);
+
+  /* ── Component — Sidebar ── */
+  --sidebar-bg: var(--primitive-gray-900);
+  --sidebar-border: var(--primitive-gray-800);
+  --sidebar-link-color: var(--primitive-gray-400);
+  --sidebar-link-hover-bg: var(--primitive-gray-800);
+  --sidebar-link-active-bg: rgba(83, 74, 183, 0.18);
+  --sidebar-link-active-color: var(--primitive-indigo-300);
+  --sidebar-label-color: var(--primitive-gray-500);
+
+  /* ── Component — Topbar ── */
+  --topbar-bg: var(--primitive-gray-900);
+  --topbar-border: var(--primitive-gray-800);
+  --topbar-text: var(--primitive-gray-50);
+
+  /* ── Component — Theme Toggle button ── */
+  --toggle-bg: var(--primitive-gray-800);
+  --toggle-bg-hover: var(--primitive-gray-700);
+  --toggle-icon-color: var(--primitive-gray-400);
+}
+
+/* ─── Global base styles ────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
