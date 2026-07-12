@@ -609,3 +609,158 @@ Error: Failed to generate content from AI model
 [90m14:02:54.547[0m  [36mℹ INFO   [39m  Gemini AI client initialized
 [90m14:02:57.091[0m  [36mℹ INFO   [39m  Server started on port 3000
 [90m14:02:57.569[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:09:34.324[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:09:34.504[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:09:34.920[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:11:07.744[0m  [31m✖ ERROR  [39m  Cannot destructure property 'name' of 'req.body' as it is undefined.
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:34:13)
+    at Layer.handleRequest (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\layer.js:152:17)
+    at next (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\route.js:117:3)
+    at handle (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\layer.js:152:17)
+    at D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:295:15
+    at processParams (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:582:12)
+    at next (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:291:5)
+    at router.handle (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:186:3)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:11:07.747[0m  [31m✖ ERROR  [39m  POST /auth/signup - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:34:13)
+    at Layer.handleRequest (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\layer.js:152:17)
+    at next (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\route.js:117:3)
+    at handle (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\lib\layer.js:152:17)
+    at D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:295:15
+    at processParams (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:582:12)
+    at next (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:291:5)
+    at router.handle (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\router\index.js:186:3)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:11:07.757[0m  [35m→ HTTP   [39m  POST /auth/signup 500 8.966 ms - 98
+[90m14:11:48.360[0m  [31m✖ ERROR  [39m  next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:11:48.362[0m  [31m✖ ERROR  [39m  POST /auth/signup - next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:11:48.364[0m  [35m→ HTTP   [39m  POST /auth/signup 500 237.566 ms - 52
+[90m14:12:37.189[0m  [31m✖ ERROR  [39m  Invalid email or password
+[90m────────────────────────────────────────────────────────────[0m
+Error: Invalid email or password
+    at Object.unauthorized (D:\Users\Gaurav\Desktop\AssetFlow\server\utils\ApiError.js:27:47)
+    at login (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:90:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:12:37.191[0m  [33m⚠ WARN   [39m  POST /auth/login - 401 - Invalid email or password
+[90m14:12:37.194[0m  [35m→ HTTP   [39m  POST /auth/login 401 44.355 ms - 55
+[90m14:13:16.839[0m  [31m✖ ERROR  [39m  No account found with that email
+[90m────────────────────────────────────────────────────────────[0m
+Error: No account found with that email
+    at Object.notFound (D:\Users\Gaurav\Desktop\AssetFlow\server\utils\ApiError.js:29:49)
+    at forgotPassword (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:133:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:13:16.840[0m  [33m⚠ WARN   [39m  POST /auth/forgot-password - 404 - No account found with that email
+[90m14:13:16.842[0m  [35m→ HTTP   [39m  POST /auth/forgot-password 404 46.395 ms - 62
+[90m14:15:29.356[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:15:29.526[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:15:30.126[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:19:49.849[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:19:49.992[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:19:50.459[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:26:36.232[0m  [31m✖ ERROR  [39m  No account found with that email
+[90m────────────────────────────────────────────────────────────[0m
+Error: No account found with that email
+    at Object.notFound (D:\Users\Gaurav\Desktop\AssetFlow\server\utils\ApiError.js:29:49)
+    at forgotPassword (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:133:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:26:36.233[0m  [33m⚠ WARN   [39m  POST /auth/forgot-password - 404 - No account found with that email
+[90m14:26:36.234[0m  [35m→ HTTP   [39m  POST /auth/forgot-password 404 266.114 ms - 62
+[90m14:26:38.876[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:26:42.106[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:26:42.290[0m  [31m✖ ERROR  [39m  next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:26:42.291[0m  [31m✖ ERROR  [39m  POST /auth/signup - next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:26:42.293[0m  [35m→ HTTP   [39m  POST /auth/signup 500 189.657 ms - 52
+[90m14:26:42.542[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:27:35.902[0m  [31m✖ ERROR  [39m  next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:27:35.903[0m  [31m✖ ERROR  [39m  POST /auth/signup - next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:27:35.905[0m  [35m→ HTTP   [39m  POST /auth/signup 500 194.228 ms - 52
+[90m14:35:10.374[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:35:10.549[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:35:11.024[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:35:18.786[0m  [31m✖ ERROR  [39m  next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:35:18.788[0m  [31m✖ ERROR  [39m  POST /auth/signup - next is not a function
+[90m────────────────────────────────────────────────────────────[0m
+TypeError: next is not a function
+    at model.<anonymous> (D:\Users\Gaurav\Desktop\AssetFlow\server\models\user.model.js:55:3)
+    at async Kareem.execPre (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\kareem\index.js:61:24)
+    at async model.$__save (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:403:5)
+    at async maybeTracedSave (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:675:7)
+    at async model.create (D:\Users\Gaurav\Desktop\AssetFlow\server\node_modules\mongoose\lib\model.js:2763:5)
+    at async signup (D:\Users\Gaurav\Desktop\AssetFlow\server\controllers\auth.controller.js:47:18)
+[90m────────────────────────────────────────────────────────────[0m
+[90m14:35:18.789[0m  [35m→ HTTP   [39m  POST /auth/signup 500 206.994 ms - 52

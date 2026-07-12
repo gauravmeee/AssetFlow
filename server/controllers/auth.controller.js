@@ -31,7 +31,7 @@ const sanitizeUser = (user) => ({
 
 const signup = async (req, res, next) => {
   try {
-    const { name, email, password, department, phone } = req.body;
+    const { name, email, password, department, phone } = req.body || {};
 
     if (!name || !email || !password) {
       throw ApiError.badRequest("Name, email and password are required");
@@ -75,7 +75,7 @@ const signup = async (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { email, password } = req.body || {};
 
     if (!email || !password) {
       throw ApiError.badRequest("Email and password are required");
@@ -120,7 +120,7 @@ const login = async (req, res, next) => {
 
 const forgotPassword = async (req, res, next) => {
   try {
-    const { email, newPassword } = req.body;
+    const { email, newPassword } = req.body || {};
 
     if (!email || !newPassword) {
       throw ApiError.badRequest("Email and new password are required");
