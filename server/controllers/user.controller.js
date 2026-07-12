@@ -1,76 +1,58 @@
-const users = require("../models/user.model");
+const User = require("../models/user.model");
 const logger = require("../utils/logger");
 const ApiResponse = require("../utils/ApiResponse");
 const ApiError = require("../utils/ApiError");
 
-// GET /
 const getHome = (req, res) => {
   logger.info("Home route accessed");
-
   res.status(200).json(ApiResponse(200, null, "Backend is working"));
 };
 
-// GET /users/:id
-const getUserById = (req, res, next) => {
+const getUserById = async (req, res, next) => {
   try {
-    const id = Number(req.params.id);
+    const user = await User.findById(req.params.id);
 
-    logger.info(`Fetching user with id: ${id}`);
-
-    // Bad Request
-    if (isNaN(id)) {
-      throw ApiError.badRequest("User ID must be a number");
-    }
-
-    const user = users.find((user) => user.id === id);
-
-    // Not Found
     if (!user) {
-      logger.warn(`User with id ${id} not found`);
       throw ApiError.notFound("User not found");
     }
 
-    logger.info(`User ${id} fetched successfully`);
-
-    res.status(200).json(ApiResponse(200, user, "User fetched successfully"));
+    return res
+      .status(200)
+      .json(ApiResponse(200, user, "User fetched successfully"));
   } catch (err) {
     logger.error(err);
     next(err);
   }
 };
 
-// POST /users
-const createUser = (req, res, next) => {
+const createUser = async (req, res, next) => {
   try {
-    const { name, email } = req.body;
+    const { name, email, password, role, department, phone } = req.body;
 
-    // Bad Request
-    if (!name || !email) {
-      throw ApiError.badRequest("Name and Email are required");
+    if (!name || !email || !password) {
+      throw ApiError.badRequest("Name, email and password are required");
     }
 
-    // Conflict
-    const existingUser = users.find((user) => user.email === email);
+    const normalizedEmail = email.trim().toLowerCase();
+    const existingUser = await User.findOne({ email: normalizedEmail });
 
     if (existingUser) {
       throw ApiError.conflict("Email already exists");
     }
 
-    logger.info(`Creating user ${name}`);
+    const user = await User.create({
+      name: name.trim(),
+      email: normalizedEmail,
+      password,
+      role: role || "EMPLOYEE",
+      department,
+      phone,
+      status: "ACTIVE",
+    });
 
-    const newUser = {
-      id: users.length + 1,
-      name,
-      email,
-    };
-
-    users.push(newUser);
-
-    logger.info(`User created successfully`);
-
-    res
+    return res
       .status(201)
-      .json(ApiResponse(201, newUser, "User created successfully"));
+      .json(ApiResponse(201, user, "User created successfully"));
   } catch (err) {
     logger.error(err);
     next(err);

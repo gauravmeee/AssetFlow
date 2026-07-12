@@ -606,3 +606,6 @@ Error: Failed to generate content from AI model
 [90m13:39:05.124[0m  [36mℹ INFO   [39m  Gemini AI client initialized
 [90m13:39:05.202[0m  [36mℹ INFO   [39m  Server started on port 3000
 [90m13:39:05.680[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m14:02:54.547[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m14:02:57.091[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m14:02:57.569[0m  [36mℹ INFO   [39m  MongoDB connected successfully

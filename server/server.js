@@ -8,6 +8,7 @@ const userRoutes = require("./routes/user.routes");
 const aiRoutes = require("./routes/ai.routes");
 const departmentRoutes = require("./routes/department.routes");
 const categoryRoutes = require("./routes/category.routes");
+const authRoutes = require("./routes/auth.routes");
 const logger = require("./utils/logger");
 const requestLogger = require("./middleware/requestLogger");
 const errorHandler = require("./middleware/errorHandler");
@@ -20,6 +21,7 @@ app.use("/", userRoutes);
 app.use("/", aiRoutes);
 app.use("/", departmentRoutes);
 app.use("/", categoryRoutes);
+app.use("/auth", authRoutes);
 
 app.use(errorHandler);
 

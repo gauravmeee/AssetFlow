@@ -1,29 +1,62 @@
-const users = [
-  {
-    id: 1,
-    name: "Ajay",
-    email: "ajay@gmail.com",
-  },
-  {
-    id: 2,
-    name: "Rahul",
-    email: "rahul@gmail.com",
-  },
-  {
-    id: 3,
-    name: "aman",
-    email: "aman@gmail.com",
-  },
-  {
-    id: 4,
-    name: "nishant",
-    email: "nishant@gmail.com",
-  },
-  {
-    id: 5,
-    name: "monit",
-    email: "monit@gmail.com",
-  },
-];
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-module.exports = users;
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 100,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
+    password: {
+      type: String,
+      required: true,
+      minlength: 6,
+      select: false,
+    },
+    role: {
+      type: String,
+      enum: ["ADMIN", "ASSET_MANAGER", "DEPARTMENT_HEAD", "EMPLOYEE"],
+      default: "EMPLOYEE",
+    },
+    department: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Department",
+      default: null,
+    },
+    phone: {
+      type: String,
+      default: "",
+    },
+    status: {
+      type: String,
+      enum: ["ACTIVE", "INACTIVE"],
+      default: "ACTIVE",
+    },
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  },
+);
+
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
+});
+
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  return bcrypt.compare(candidatePassword, this.password);
+};
+
+module.exports = mongoose.model("User", userSchema);
