@@ -597,3 +597,12 @@ Error: Failed to generate content from AI model
 [90m12:28:37.634[0m  [36mℹ INFO   [39m  Gemini AI client initialized
 [90m12:28:37.821[0m  [36mℹ INFO   [39m  Server started on port 3000
 [90m12:28:37.858[0m  [31m✖ ERROR  [39m  MongoDB connection failed: querySrv ECONNREFUSED _mongodb._tcp.cluster0.pcnyn.mongodb.net
+[90m13:32:14.327[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m13:32:14.425[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m13:32:14.921[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m13:35:26.057[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m13:35:26.142[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m13:35:26.580[0m  [36mℹ INFO   [39m  MongoDB connected successfully
+[90m13:39:05.124[0m  [36mℹ INFO   [39m  Gemini AI client initialized
+[90m13:39:05.202[0m  [36mℹ INFO   [39m  Server started on port 3000
+[90m13:39:05.680[0m  [36mℹ INFO   [39m  MongoDB connected successfully
